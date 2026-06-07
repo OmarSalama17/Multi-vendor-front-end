@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme {
+  --font-cairo: "Cairo Variable", sans-serif;
+  --font-sans: var(--font-cairo);
+
+  --color-primary: #0D3B47;
+  --color-primary-light: #1A5C6E;
+  --color-accent: #D4920A;
+  --color-accent-light: #F0A800;
+
+  /* Dark mode surfaces */
+  --color-dark-bg: #0A0A0A;
+  --color-dark-surface: #141414;
+  --color-dark-card: #1C1C1C;
+  --color-dark-border: #2A2A2A;
+
+  /* Light mode surfaces */
+  --color-light-bg: #F7F5F2;
+  --color-light-surface: #FFFFFF;
+  --color-light-card: #F0EDE8;
+  --color-light-border: #E0DDD8;
+
+  /* Status colors */
+  --color-status-pending: #F59E0B;
+  --color-status-processing: #3B82F6;
+  --color-status-shipped: #8B5CF6;
+  --color-status-delivered: #10B981;
+  --color-status-cancelled: #EF4444;
+  --color-status-returned: #6B7280;
+  --color-status-banned: #DC2626;
+}
+
+@layer base {
+  :root {
+    --background: #F7F5F2;
+    --foreground: #1A1A1A;
+    --card: #F0EDE8;
+    --border: #E0DDD8;
+    --muted: #6B6B6B;
+  }
+
+  .dark {
+    --background: #0A0A0A;
+    --foreground: #F5F5F5;
+    --card: #1C1C1C;
+    --border: #2A2A2A;
+    --muted: #8A8A8A;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-cairo);
+  }
+}
+
+@layer utilities {
+  .text-muted {
+    color: var(--muted);
+  }
+
+  .bg-card {
+    background-color: var(--card);
+  }
+
+  .bg-background {
+    background-color: var(--background);
+  }
+
+  .border-default {
+    border-color: var(--border);
+  }
+}
