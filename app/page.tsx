@@ -1,65 +1,63 @@
-import Image from "next/image";
+import FeaturedStores from "./components/home/FeaturedStores";
+import HeroBanner from "./components/home/HeroBanner";
+import ProductSection from "./components/home/ProductSection";
+import ShopByCategory from "./components/home/ShopByCategory";
+import ShopTheLook from "./components/home/ShopTheLook";
 
 export default function Home() {
+  const newTshirts = [
+    { storeName: "Street Style", productName: "Oversize Basic", price: 180, isNew: true, colors: ["#FFFFFF", "#000000", "#3B82F6"] },
+    { storeName: "Urban Threads", productName: "Graphic Print", price: 220, isNew: true, colors: ["#FFFFFF", "#000000"] },
+    { storeName: "Sport Zone", productName: "Dry Fit", price: 150, isNew: true, colors: ["#6B7280", "#2563EB"] },
+    { storeName: "Fashion Bazaar", productName: "Crop", price: 160, isNew: true, colors: ["#EC4899", "#FFFFFF"] },
+    { storeName: "Elegance", productName: "Polo Classic", price: 250, isNew: true, colors: ["#0D3B47", "#FFFFFF"] },
+    { storeName: "Urban Threads", productName: "Henley", price: 190, isNew: true, colors: ["#9CA3AF", "#D4920A"] },
+  ];
+
+  const newShirts = [
+    { storeName: "Street Style", productName: "Linen Casual", price: 320, isNew: true, colors: ["#FFFFFF", "#BFDBFE"] },
+    { storeName: "Elegance", productName: "Oxford Formal", price: 450, isNew: true, colors: ["#FFFFFF", "#3B82F6"] },
+    { storeName: "Urban Threads", productName: "Flannel", price: 380, isNew: true, colors: ["#DC2626", "#166534"] },
+    { storeName: "Street Style", productName: "Embroidered Polo", price: 290, isNew: true, colors: ["#000000"] },
+    { storeName: "Fashion Bazaar", productName: "Satin Night", price: 550, isNew: true, colors: ["#000000", "#6B21A8"] },
+    { storeName: "Street Style", productName: "Oversize Casual", price: 340, isNew: true, colors: ["#D1D5DB"] },
+  ];
+
+  const newPants = [
+    { storeName: "Street Style", productName: "Slim Fit Jeans", price: 450, isNew: true, colors: ["#1E40AF", "#000000"] },
+    { storeName: "Urban Threads", productName: "Linen Casual", price: 380, isNew: true, colors: ["#FFEDD5"] },
+    { storeName: "Sport Zone", productName: "Jogger", price: 280, isNew: true, colors: ["#6B7280", "#000000"] },
+    { storeName: "Elegance", productName: "Chino", price: 420, isNew: true, colors: ["#D4920A", "#1E3A8A"] },
+    { storeName: "Street Style", productName: "Cargo", price: 390, isNew: true, colors: ["#166534", "#000000"] },
+    { storeName: "Street Style", productName: "Bootcut Jeans", price: 480, isNew: true, colors: ["#2563EB"] },
+  ];
+
+  const newShorts = [
+    { storeName: "Urban Threads", productName: "Summer Linen", price: 180, isNew: true, colors: ["#FFFFFF", "#FEF08A"] },
+    { storeName: "Street Style", productName: "Denim", price: 220, isNew: true, colors: ["#3B82F6"] },
+    { storeName: "Sport Zone", productName: "Sport", price: 150, isNew: true, colors: ["#000000", "#9CA3AF"] },
+    { storeName: "Street Style", productName: "Cargo", price: 260, isNew: true, colors: ["#8B9295", "#0D3B47"] },
+    { storeName: "Urban Threads", productName: "Swim", price: 140, isNew: true, colors: ["#60A5FA", "#FACC15"] },
+    { storeName: "Comfort Basics", productName: "Cotton Boxer", price: 120, isNew: true, colors: ["#FFFFFF", "#D1D5DB"] },
+  ];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main className="bg-background text-on-background font-body-md text-body-md antialiased rtl">
+      <HeroBanner />
+      
+      <ShopByCategory />
+      
+      <ProductSection title="وصل جديد: تيشيرتات" products={newTshirts} />
+      
+      <ShopTheLook />
+      
+      <ProductSection title="وصل جديد: قمصان" products={newShirts} />
+      
+      <ProductSection title="وصل جديد: بناطيل" products={newPants} />
+      
+      <ProductSection title="وصل جديد: شورتات" products={newShorts} />
+      
+      <FeaturedStores/>
+    </main>
   );
 }
