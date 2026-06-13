@@ -1,6 +1,6 @@
 export default function ShopByCategory() {
   const menCategories = ["تيشيرتات", "قمصان", "بناطيل", "شورتات", "جاكيتات", "بدل", "رياضي"];
-  const womenCategories = ["فساتين", "بلوزات", "جيبات", "عباءات", "رياضي", "ملابس بيت"];
+//   const womenCategories = ["فساتين", "بلوزات", "جيبات", "عباءات", "رياضي", "ملابس بيت"]; soon
 
   return (
     <section className="py-12 px-section-padding container mx-auto w-full">
@@ -10,7 +10,7 @@ export default function ShopByCategory() {
       <div className="flex flex-col gap-6">
         <div className="flex items-center gap-4 flex-row-reverse">
           <span className="font-title-lg text-title-lg text-on-surface whitespace-nowrap min-w-[80px]">👔 رجالي</span>
-          <div className="flex overflow-x-auto hide-scrollbar gap-3 pb-2 flex-row-reverse flex-1">
+          <div className="flex overflow-x-auto flex-wrap hide-scrollbar gap-3 pb-2 flex-row-reverse flex-1">
             {menCategories.map((cat, index) => (
               <button
                 key={index}
@@ -26,7 +26,7 @@ export default function ShopByCategory() {
           </div>
         </div>
 
-        <div className="flex items-center gap-4 flex-row-reverse">
+        {/* <div className="flex items-center gap-4 flex-row-reverse">
           <span className="font-title-lg text-title-lg text-on-surface whitespace-nowrap min-w-[80px]">👗 حريمي</span>
           <div className="flex overflow-x-auto hide-scrollbar gap-3 pb-2 flex-row-reverse flex-1">
             {womenCategories.map((cat, index) => (
@@ -38,7 +38,7 @@ export default function ShopByCategory() {
               </button>
             ))}
           </div>
-        </div>
+        </div> */} {/*soon*/}
       </div>
     </section>
   );

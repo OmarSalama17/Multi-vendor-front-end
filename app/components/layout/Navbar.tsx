@@ -53,7 +53,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 w-full z-50 bg-[#0a0a0a]/85 backdrop-blur-xl border-b border-[#2A2A2A] shadow-sm transition-all duration-300 dark" dir="rtl">
+    <nav className="sticky top-0 w-full z-50 bg-background/85 backdrop-blur-xl border-b border-outline-variant shadow-sm transition-all duration-300" dir="rtl">
       <div className="flex flex-row justify-between items-center px-section-padding h-20 container mx-auto">
         
         <Link href="/" className="flex items-center gap-3 group">
@@ -119,12 +119,12 @@ export default function Navbar() {
 
           <button aria-label="Notifications" className="relative w-10 h-10 rounded-full flex items-center justify-center text-on-surface hover:text-primary hover:bg-surface-container-high transition-all duration-300">
             <span className="material-symbols-outlined" data-icon="notifications">notifications</span>
-            <span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary ring-2 ring-[#0a0a0a] animate-pulse"></span>
+            <span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary ring-2 ring-background animate-pulse"></span>
           </button>
 
           <button aria-label="Shopping Cart" className="relative w-10 h-10 rounded-full flex items-center justify-center text-on-surface hover:text-primary hover:bg-surface-container-high transition-all duration-300">
             <span className="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
-            <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] flex items-center justify-center rounded-full bg-secondary text-on-secondary-container font-label-sm text-[10px] font-bold ring-2 ring-[#0a0a0a] px-1">
+            <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] flex items-center justify-center rounded-full bg-secondary text-on-secondary-container font-label-sm text-[10px] font-bold ring-2 ring-background px-1">
               3
             </span>
           </button>

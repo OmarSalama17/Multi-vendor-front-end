@@ -1,8 +1,8 @@
-import FeaturedStores from "./components/home/FeaturedStores";
-import HeroBanner from "./components/home/HeroBanner";
-import ProductSection from "./components/home/ProductSection";
-import ShopByCategory from "./components/home/ShopByCategory";
-import ShopTheLook from "./components/home/ShopTheLook";
+import FeaturedStores from "../components/home/FeaturedStores";
+import HeroBanner from "../components/home/HeroBanner";
+import ProductSection from "../components/home/ProductSection";
+import ShopByCategory from "../components/home/ShopByCategory";
+import ShopTheLook from "../components/home/ShopTheLook";
 
 export default function Home() {
   const newTshirts = [
